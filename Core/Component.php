@@ -5,11 +5,6 @@ namespace somatek\DataComponentsBundle\Core;
 abstract class Component
 {
     /**
-     * Path for the component's template
-     */
-    const TEMPLATE_PATH = '';
-
-    /**
      * Data to be set for the component
      * @var array
      */
@@ -29,10 +24,5 @@ abstract class Component
     public function setData($data)
     {
         $this->data = $data;
-    }
-
-    public function render()
-    {
-
     }
 }

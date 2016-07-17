@@ -9,9 +9,9 @@ use somatek\DataComponentsBundle\Core\ComponentFactory;
 
 class DataComponentsTwigExtension extends Twig_Extension
 {
-    public function getComponent($component_name='', $data=array(), $options=array())
+    public function getComponent($twig, $data=array(), $options=array())
     {
-        return ComponentFactory::instantiate($component_name, $data, $options);
+        return ComponentFactory::instantiate($twig, $data, $options);
     }
 
     public function getFunctions()
