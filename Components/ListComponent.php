@@ -9,6 +9,12 @@ class ListComponent extends Component
 {
     public function render(Twig_Environment $twig)
     {
-        return $twig->render('DataComponentsBundle:List:List.html.twig');
+        return $twig->render(
+            'DataComponentsBundle:List:List.html.twig',
+            [
+                'collection' => $this->getData(),
+                'options'    => $this->getOptions()
+            ]
+        );
     }
 }
