@@ -8,6 +8,6 @@ class ComponentFactory
 {
     public static function instantiate($component_name='', $data=array(), $options=array())
     {
-        return new ($component_name)($data, $options);
+        return new $component_name($data, $options);
     }
 }
