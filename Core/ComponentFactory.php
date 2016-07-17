@@ -8,11 +8,12 @@
 
 namespace somatek\datacomponents\Core;
 
+use somatek\datacomponents\Components\ListComponent;
 
 class ComponentFactory
 {
-    public function instantiate($class_name)
+    public static function instantiate($component_name='', $data=array(), $options=array())
     {
-        return new ($class_name)();
+        return new $component_name($data, $options);
     }
 }

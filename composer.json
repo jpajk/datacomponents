@@ -1,0 +1,15 @@
+{
+    "name": "somatek/datacomponents",
+    "description": "A small PHP library for generating templates.",
+    "type": "library",
+    "require": {
+        "twig/twig": "^1.24"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "somatek",
+            "email": "jpajak@yandex.com"
+        }
+    ]
+}
