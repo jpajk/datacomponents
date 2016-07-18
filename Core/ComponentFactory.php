@@ -5,7 +5,6 @@ namespace somatek\DataComponentsBundle\Core;
 use Twig_Environment;
 
 use somatek\DataComponentsBundle\Components\ListComponent;
-use somatek\DataComponentsBundle\Core\ComponentOptions;
 
 class ComponentFactory
 {
