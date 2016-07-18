@@ -1,5 +1,5 @@
-    <ul id="{{ collection.id }}" class="{{ collection.class }}">
-        {% for item in collection %}
+    <ul id="{{ component.id_component }}" class="{{ component.class_component }}">
+        {% for item in component.data %}
             {% include 'ListItem.html.twig' %}
         {% endfor %}
     </ul>

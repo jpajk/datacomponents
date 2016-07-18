@@ -12,8 +12,7 @@ class ListComponent extends Component
         return $twig->render(
             'DataComponentsBundle:List:List.html.twig',
             [
-                'collection' => $this->getData(),
-                'options'    => $this->getOptions()
+                'component' => $this->getOptions()
             ]
         );
     }

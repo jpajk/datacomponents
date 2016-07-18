@@ -2,8 +2,6 @@
 
 namespace somatek\DataComponentsBundle\Core;
 
-use somatek\DataComponentsBundle\Core\ComponentOptions;
-
 abstract class Component
 {
     /**
@@ -29,7 +27,7 @@ abstract class Component
     /**
      * @param ComponentOptions $options
      */
-    public function setOptions(ComponentOptions $options)
+    public function setOptions($options)
     {
         $this->options = $options;
     }

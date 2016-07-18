@@ -4,14 +4,15 @@ namespace somatek\DataComponentsBundle\TwigExtensions;
 
 use Twig_SimpleFunction;
 use Twig_Extension;
+use Twig_Environment;
 
 use somatek\DataComponentsBundle\Core\ComponentFactory;
 
 class DataComponentsTwigExtension extends Twig_Extension
 {
-    public function getComponent($twig, $component_name, $data, $options)
+    public function getComponent(Twig_Environment $twig, $options)
     {
-        return ComponentFactory::instantiate($twig, $component_name, $data, $options);
+        return ComponentFactory::instantiate($twig, $options);
     }
 
     public function getFunctions()

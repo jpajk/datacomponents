@@ -12,8 +12,8 @@ class ComponentOptions
 
     private static $allowed_types = [
         'component_name'    => 'string',
-        'id-component'      => 'string',
-        'class-component'   => 'string'
+        'id_component'      => 'string',
+        'class_component'   => 'string'
     ];
 
     /**
@@ -25,8 +25,8 @@ class ComponentOptions
      * @var array
      */
     private $defaults = [
-        'id-component'      => 'id-component',
-        'class-component'   => 'class-component'
+        'id_component'      => 'id-component',
+        'class_component'   => 'class-component'
     ];
 
     /**
