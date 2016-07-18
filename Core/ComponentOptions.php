@@ -27,6 +27,8 @@ class ComponentOptions
     private $defaults = [
         'id_component'      => 'id-component',
         'class_component'   => 'class-component'
+        'id_container'      => 'id-container'
+        'class_container'   => 'class-container'
     ];
 
     /**
