@@ -1,19 +1,34 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alecto
- * Date: 7/17/16
- * Time: 9:37 AM
- */
 
-namespace somatek\datacomponents\Core;
+namespace somatek\DataComponentsBundle\Core;
 
-use somatek\datacomponents\Components\ListComponent;
+use somatek\DataComponentsBundle\Components\GalleryComponent;
+use Twig_Environment;
+
+use somatek\DataComponentsBundle\Components\ListComponent;
 
 class ComponentFactory
 {
-    public static function instantiate($component_name='', $data=array(), $options=array())
+    protected static function getAvailableComponents()
     {
-        return new $component_name($data, $options);
+        return [
+            'list' => new ListComponent(),
+            'gallery' => new GalleryComponent()
+        ];
+    }
+
+    public static function instantiate(Twig_Environment $twig, $options)
+    {
+        $component_options = new ComponentOptions();
+        $component_options->resolveOptions($options);
+
+        $options_array = $component_options->getOptions();
+        $component_list = self::getAvailableComponents();
+
+        $component = $component_list[$options_array['component_name']];
+        $component->setOptions($options_array);
+        $component->setData($options_array['data']);
+
+        return $component->render($twig);
     }
 }

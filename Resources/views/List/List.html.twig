@@ -1,6 +1,7 @@
-<ul id="{{ collection.id }}" class="{{ collection.class }}">
-	{% for item in collection %}
-		{% include 'ListItem.html.twig' %}    
-	{% endfor %}	
-</ul>
-		
+<div id="{{ component.id_container }}" class="{{ component.class_container }}">
+    <ul id="{{ component.id_component }}" class="{{ component.class_component }}">
+        {% for item in component.data %}
+            {% include 'DataComponentsBundle:List:ListItem.html.twig' %}
+        {% endfor %}
+    </ul>
+</div>

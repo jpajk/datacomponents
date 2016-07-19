@@ -1,3 +1,5 @@
-<li id="{{ loop.index }}" class="sm-list-item-{{ loop.index }}">
-	{{ item.content }}
+<li id="sm-list-item-{{ loop.index }}  " class="{{ component.class_item }}">
+    <a class="{{ component.class_a }} item-a-{{ loop.index }}" href="{{ item.href|default('#') }}">
+        {{ item.text|default('Link no ' ~ loop.index) }}
+    </a>
 </li>

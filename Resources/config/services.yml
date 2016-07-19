@@ -1,5 +1,5 @@
 services:
     somatek.datacomponents.twig.extension:
-        class: somatek\datacomponents\TwigExtensions\DataComponentsTwigExtension
+        class: somatek\DataComponentsBundle\TwigExtensions\DataComponentsTwigExtension
         tags:
             - { name: twig.extension }

@@ -1,19 +1,36 @@
 <?php
 
-namespace somatek\datacomponents\Core;
+namespace somatek\DataComponentsBundle\Core;
 
 abstract class Component
 {
     /**
-     * Path for the component's template
+     * Component options
+     * @var array
      */
-    const TEMPLATE_PATH = '';
+    private $options;
 
     /**
      * Data to be set for the component
      * @var array
      */
     private $data;
+
+    /**
+     * @return ComponentOptions
+     */
+    public function getOptions()
+    {
+        return $this->options;
+    }
+
+    /**
+     * @param ComponentOptions $options
+     */
+    public function setOptions($options)
+    {
+        $this->options = $options;
+    }
 
     /**
      * @return array
@@ -29,10 +46,5 @@ abstract class Component
     public function setData($data)
     {
         $this->data = $data;
-    }
-
-    public function render()
-    {
-
     }
 }
