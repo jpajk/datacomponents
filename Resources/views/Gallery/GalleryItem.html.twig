@@ -1,3 +1,5 @@
-<div id="item-{{ loop.index }}" class="sm-gallery-item-{{ loop.index }}}">	
-	<img class="{{ item.class }}" src="{{ item.src }}">
-</div>
+<li id="sm-list-item-{{ loop.index }}  " class="{{ component.class_item }}">
+	<a class="{{ component.class_a }} item-a-{{ loop.index }}" href="{{ item.href|default('#') }}">
+		<img src="{{ item.src|default("http://lorempixel.com/200/200/") }}" alt="{{ item.alt|default("Change me") }}">
+	</a>
+</li>

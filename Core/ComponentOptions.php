@@ -7,7 +7,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 class ComponentOptions
 {
     private static $available_components = [
-        'list'
+        'list', 'gallery'
     ];
 
     private static $allowed_types = [
@@ -26,9 +26,11 @@ class ComponentOptions
      */
     private $defaults = [
         'id_component'      => 'id-component',
-        'class_component'   => 'class-component'
-        'id_container'      => 'id-container'
-        'class_container'   => 'class-container'
+        'class_component'   => 'class-component',
+        'id_container'      => 'id-container',
+        'class_container'   => 'class-container',
+        'class_item'        => 'class-item',
+        'class_a'           => 'class-a'
     ];
 
     /**

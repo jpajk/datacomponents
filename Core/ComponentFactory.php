@@ -2,6 +2,7 @@
 
 namespace somatek\DataComponentsBundle\Core;
 
+use somatek\DataComponentsBundle\Components\GalleryComponent;
 use Twig_Environment;
 
 use somatek\DataComponentsBundle\Components\ListComponent;
@@ -11,7 +12,8 @@ class ComponentFactory
     protected static function getAvailableComponents()
     {
         return [
-            'list' => new ListComponent()
+            'list' => new ListComponent(),
+            'gallery' => new GalleryComponent()
         ];
     }
 
