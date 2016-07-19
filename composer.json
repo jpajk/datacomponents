@@ -3,7 +3,8 @@
     "description": "A small PHP library for generating templates.",
     "type": "library",
     "require": {
-        "twig/twig": "^1.24"
+        "twig/twig": "^1.24",
+        "symfiony/options-resolver": "^3.1.2"
     },
     "license": "MIT",
     "authors": [
