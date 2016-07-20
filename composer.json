@@ -18,5 +18,5 @@
             "somatek\\DataComponentsBundle" : ""
         }
     },
-    "target-dir" : "somatek/DataComponentsBundle",
+    "target-dir" : "somatek/DataComponentsBundle"
 }
